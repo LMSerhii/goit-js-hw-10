@@ -1,6 +1,8 @@
 const createMarkup = arrey => {
-  if (!arrey) {
-    return;
+  if (!arrey.length) {
+    const markup = `<img src="https://assets.materialup.com/uploads/874a163f-e28c-48f0-bc4f-68349595527c/preview.jpg" alt="404" width="400">
+                    <p style="display:flex; align-items:center; justify-content:center; width: 600px">PAGE NOT FOUND. SORRY!!!</p>`;
+    return markup;
   }
   const markup = arrey
     .map(el => {

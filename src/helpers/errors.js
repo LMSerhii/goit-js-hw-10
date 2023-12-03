@@ -1,3 +1,4 @@
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { refs } from './selectors';
 
 const axiosError = error => {
@@ -6,4 +7,9 @@ const axiosError = error => {
   console.log(error.message);
 };
 
-export { axiosError };
+const notiflixError = error => {
+  refs.load.classList.remove('is-active');
+  Notify.failure(refs.error.textContent);
+  console.log(error.message);
+};
+export { axiosError, notiflixError };
