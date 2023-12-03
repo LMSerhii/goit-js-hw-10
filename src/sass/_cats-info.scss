@@ -1,8 +1,25 @@
+.breed-select,
+.loader,
+.error,
 .cat-info {
-    width: 900px;
-    display: flex;
-    gap: 15px;
-    span {
-        font-style: bold;
-    }
+  display: none;
+}
+
+.is-active {
+  display: block;
+}
+
+.breed-select {
+  margin-bottom: 15px;
+}
+
+.cat-info.is-active{
+    
+  width: 900px;
+  display: flex;
+  gap: 15px;
+
+  span {
+    font-weight: 500;
+  }
 }
